@@ -14,6 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SETTINGS_DIR = os.path.join(BASE_DIR, 'settings')
 
 #SECRET Generator
 try:
@@ -22,8 +23,9 @@ except ImportError:
     from django.utils.crypto import get_random_string
     chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
     key = get_random_string(50, chars)
-    with open('secret.py', 'w') as f_out:
+    with open(SETTINGS_DIR, 'w') as f_out:
         f_out.write('SECRET_KEY = {key}\n\n'.format(key=key))
+
     from .secret import *
 
 
