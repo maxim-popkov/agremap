@@ -1,4 +1,4 @@
 *.pyc
 .idea
 *.sqlite3
-agremap/settings/secret.py
+secret.py
