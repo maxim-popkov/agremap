@@ -3,5 +3,6 @@
 *.sqlite3
 *.txt
 /verstka
+/agreapp/migrations
 session.txt.py
 secret.py
