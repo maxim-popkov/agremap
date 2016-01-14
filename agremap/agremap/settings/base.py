@@ -41,8 +41,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-PROJECT_APPS = [
-
+PROJECT_APPS = [ 
+    'agreapp',
 ]
 
 PREREQ_APPS = [
