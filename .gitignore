@@ -1,7 +1,6 @@
 *.pyc
 .idea
 *.sqlite3
-*.txt
 /verstka
 /agremap/agreapp/migrations
 session.txt.py

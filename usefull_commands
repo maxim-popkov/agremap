@@ -6,3 +6,9 @@ python manage.py migrate
 
 # Отчитстить базу от таблиц приложения
 python manage.py migrate appname zero
+
+# нагенерировать данных в базу 
+# должен быть установлен autofixture
+# pip install autofixture (и добавить в Installer apps)
+# (создаст три записи для ModelName)
+python manage.py loadtestdata appname.ModelName:3
