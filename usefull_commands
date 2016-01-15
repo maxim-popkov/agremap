@@ -1,0 +1,8 @@
+# Подготовить миграции для моделей
+python manage.py makemigrations appname
+
+# Внести изменения в базу
+python manage.py migrate
+
+# Отчитстить базу от таблиц приложения
+python manage.py migrate appname zero
