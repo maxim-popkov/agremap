@@ -52,6 +52,7 @@ PREREQ_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'autofixture',
 ]
 
 INSTALLED_APPS = PREREQ_APPS + PROJECT_APPS

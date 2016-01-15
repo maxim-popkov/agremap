@@ -6,6 +6,7 @@ from .models import (Organization,
 
 from django.apps import apps
 
+
 #Organization Admin Settings
 class OrganizationAdmin(admin.ModelAdmin):
     pass
@@ -47,7 +48,7 @@ admin_registr = [] # (Organization, OrganizationAdmin)
 admin_models = [m for m, a in admin_registr]
 app_models = apps.get_app_config('agreapp').get_models()
 for model in app_models:
-    print(model)
+    # print(model)
     if model not in admin_models:
         try:
             admin.site.register(model)
