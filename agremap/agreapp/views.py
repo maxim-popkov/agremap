@@ -6,10 +6,16 @@ from agreapp.models import Organization
 def index(request):
     return HttpResponse("You are on the index page.")
 
-def city(request, city_name):
+def cities(request, city_name):
     city = city_name.title()
     list_of_organizations = Organization.objects.filter(city=city_name)
     return HttpResponse("Here you can see all organizations in this city: %s." % city, list_of_organizations)
+
+def services(request):
+    return HttpResponse("All services.")
+
+def chains(request):
+    return HttpResponse("All dental chains.")
 
 def add(request, city_name):
     city = city_name.title()
