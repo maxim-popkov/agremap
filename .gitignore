@@ -4,6 +4,6 @@
 session.txt.py
 secret.py
 /verstka
-/agremap/assets/.sass-cache
-/agremap/assets/bower_components
-/agremap/agreapp/migrations
+**/.sass-cache/*
+**/bower_components/*
+**/migrations/*
