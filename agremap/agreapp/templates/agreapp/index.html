@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Search Block -->
+<div class="container-fluid search-block vertical-center">
+    <div class="vcenter">
+        <div class="row">
+            <h1 class="search-block__header-one">Поиск лучших стоматологий в Москве <!-- <a class="search-block__city" href="#">Москве</a> --></h1>
+        </div>
+        <div class="row">
+            <h2 class="search-block__header-two">Отзывы и рейтинги о стоматологиях вашего города</h2>
+        </div>
+        <div class="row">
+            <h4 class="search-block_link"> 
+                <a href="#">2300 клиник</a> в Москве 
+            </h4>
+        </div>
+        <!-- search inputs -->
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <form role="form">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="search-block__search_input input-lg form-control" placeholder="Название организации">
+                            <span class="input-group-btn">
+                                <button class="search-block__search_btn btn btn-lg" type="button">Найти</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- end search inputs -->
+        <!-- places near -->
+        <div class="row">
+            <h4 class="search-block_link">
+                <a href="#">
+                    <i class="glyphicon glyphicon-map-marker"></i> 
+                    Стоматологии рядом
+                </a>
+            </h4>
+        </div>
+        <!-- end places near -->
+    </div>
+</div>
+<!-- End Search Block -->
+{% endblock %}

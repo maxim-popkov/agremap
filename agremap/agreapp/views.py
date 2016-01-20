@@ -1,10 +1,11 @@
 from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
 from agreapp.models import Organization
 
 # Create your views here.
 
 def index(request):
-    return HttpResponse("You are on the index page.")
+    return render(request, 'agreapp/index.html')
 
 def cities(request):
     city = city_name.title()
