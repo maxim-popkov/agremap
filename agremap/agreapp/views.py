@@ -7,9 +7,7 @@ def index(request):
     return HttpResponse("You are on the index page.")
 
 def cities(request):
-    city = city_name.title()
-    list_of_organizations = Organization.objects.filter(city=city_name)
-    return HttpResponse("Here you can see all organizations in this city: %s." % city, list_of_organizations)
+    return HttpResponse("Here you can all cities.")
 
 def city(request, city_name):
     # city = city_name.title()

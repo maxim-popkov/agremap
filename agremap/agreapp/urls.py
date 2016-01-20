@@ -3,9 +3,11 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    # Страница всех городов
     url(r'^cities/$', views.cities, name='cities'),
     url(r'^services/$', views.services, name='services'),
     url(r'^chains/$', views.chains, name='chains'),
+    # Страница организаций для конкретного города
     url(r'^cities/(?P<city_name>[a-z]+)/$', views.city, name='city'),
     url(r'^cities/(?P<city_name>[a-z]+)/add/$', views.add, name='add'),
     url(r'^cities/(?P<city_name>[a-z]+)/search/$', views.search, name='search'),
