@@ -1,7 +1,9 @@
 *.pyc
 .idea
 *.sqlite3
-/verstka
-/agremap/agreapp/migrations
 session.txt.py
 secret.py
+/verstka
+/agremap/assets/.sass-cache
+/agremap/assets/bower_components
+/agremap/agreapp/migrations
