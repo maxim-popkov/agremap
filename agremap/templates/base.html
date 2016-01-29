@@ -1,5 +1,6 @@
-{% load staticfiles %}
-
+{% block staticfiles %}
+    {% load staticfiles %}
+{% endblock %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +23,7 @@
     <!-- styles -->
     {% block styles %}
     <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="./assets/stylesheets/styles.css">
+    <link rel="stylesheet" href="{% static '/assets/stylesheets/styles.css' %}">
     {% endblock %}
     <!-- end-styles -->
 </head>
@@ -65,9 +66,17 @@
   
     <!-- Begin Scripts -->
     {% block footer_scripts %}
-    <script src="./assets/bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="./assets/javascripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="./assets/javascripts/app.js" type="text/javascript" charset="utf-8" async></script>
+        <script src="{% static '/assets/bower_components/jquery/dist/jquery.min.js' %}" 
+                type="text/javascript" charset="utf-8">
+        </script>
+        <script src="{% static '/assets/javascripts/bootstrap.min.js' %}" 
+                type="text/javascript" 
+                charset="utf-8">
+        </script>
+        <script src="{% static '/assets/javascripts/app.js' %}" 
+                type="text/javascript" 
+                charset="utf-8" async>
+        </script>
     {% endblock %}
     <!-- End Scripts -->
 </body>

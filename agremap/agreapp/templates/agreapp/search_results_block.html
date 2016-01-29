@@ -1,114 +1,14 @@
+{% load staticfiles %}
 <!-- Search Results -->
 <div class="container-fluid results-list-block">
     <div class="row">
+    <!--hack: repeat four times -->
+    {% for i in "xxxx" %}
         <div class="col-md-3">
             <div class="thumbnail-with-data thumbnail">
-                <img class="thumbnail-with-data__image" src="./assets/images/thumb.jpg" alt="Зубодерня">    
-                <div class="thumbnail-with-data__data">
-                    <div class="thumbnail-with-data__name">
-                        <div class="row">
-                            <div class="container-fluid">
-                                <h3>Зубадерня лейбел</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="caption">
-                    <address class="row">
-                        <div class="col-md-12">
-                            <p><i class="glyphicon glyphicon-home"></i>г. Москва, ул. Перепелкина, д.6</p>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="caption-metro"><i>M</i>Метро</p>
-                            <div>
-                                <a href="tel:+74956452330"><i class="glyphicon glyphicon-earphone"></i> +74956452330</a>                            
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="caption-metro"><i class="glyphicon glyphicon-time"></i>Работает</p>
-                            <div>
-                                <a href="http://skiflab.ru"><i class="glyphicon glyphicon-cloud"></i> skiflab.ru</a>                            
-                            </div>
-                        </div>
-                    </address>
-                </div>
-                <a href="#" class="btn btn-primary" role="button">Подробнее</a>
-            </div>
-
-        </div>
-        <div class="col-md-3">
-            <div class="thumbnail-with-data thumbnail">
-                <img class="thumbnail-with-data__image" src="./assets/images/thumb.jpg" alt="Зубодерня">    
-                <div class="thumbnail-with-data__data">
-                    <div class="thumbnail-with-data__name">
-                        <div class="row">
-                            <div class="container-fluid">
-                                <h3>Зубадерня лейбел</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="caption">
-                    <address class="row">
-                        <div class="col-md-12">
-                            <p><i class="glyphicon glyphicon-home"></i>г. Москва, ул. Перепелкина, д.6</p>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="caption-metro"><i>M</i>Метро</p>
-                            <div>
-                                <a href="tel:+74956452330"><i class="glyphicon glyphicon-earphone"></i> +74956452330</a>                            
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="caption-metro"><i class="glyphicon glyphicon-time"></i>Работает</p>
-                            <div>
-                                <a href="http://skiflab.ru"><i class="glyphicon glyphicon-cloud"></i> skiflab.ru</a>                            
-                            </div>
-                        </div>
-                    </address>
-                </div>
-                <a href="#" class="btn btn-primary" role="button">Подробнее</a>
-            </div>
-
-        </div>
-        <div class="col-md-3">
-            <div class="thumbnail-with-data thumbnail">
-                <img class="thumbnail-with-data__image" src="./assets/images/thumb.jpg" alt="Зубодерня">    
-                <div class="thumbnail-with-data__data">
-                    <div class="thumbnail-with-data__name">
-                        <div class="row">
-                            <div class="container-fluid">
-                                <h3>Зубадерня лейбел</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="caption">
-                    <address class="row">
-                        <div class="col-md-12">
-                            <p><i class="glyphicon glyphicon-home"></i>г. Москва, ул. Перепелкина, д.6</p>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="caption-metro"><i>M</i>Метро</p>
-                            <div>
-                                <a href="tel:+74956452330"><i class="glyphicon glyphicon-earphone"></i> +74956452330</a>                            
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="caption-metro"><i class="glyphicon glyphicon-time"></i>Работает</p>
-                            <div>
-                                <a href="http://skiflab.ru"><i class="glyphicon glyphicon-cloud"></i> skiflab.ru</a>                            
-                            </div>
-                        </div>
-                    </address>
-                </div>
-                <a href="#" class="btn btn-primary" role="button">Подробнее</a>
-            </div>
-
-        </div>
-        <div class="col-md-3">
-            <div class="thumbnail-with-data thumbnail">
-                <img class="thumbnail-with-data__image" src="./assets/images/thumb.jpg" alt="Зубодерня">    
+                <img class="thumbnail-with-data__image" 
+                     src="{% static '/assets/images/thumb.jpg' %}" 
+                     alt="Зубодерня">
                 <div class="thumbnail-with-data__data">
                     <div class="thumbnail-with-data__name">
                         <div class="row">
@@ -139,8 +39,8 @@
                 </div>
                 <a href="#" class="btn btn-primary" role="button">Подробнее</a>
             </div>
-
         </div>
-    </div>
+    {% endfor %}
+    </div> 
 </div>
 <!-- End Search Results -->

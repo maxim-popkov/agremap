@@ -26,14 +26,14 @@ def add(request, city_name):
     return HttpResponse("Here you can add new clinic for the")
 
 def search(request, city_name):
-    return HttpResponse("This is search page.")
+    return render(request, 'agreapp/search_results.html')
 
-def searchresult(request, city_name):
+def search_results(request, city_name):
     # city = city_name.title()
     # obj = Organization.objects.filter(city=city_name)
     return HttpResponse("This is a list of all organizations in the.")
 
-def detailview(request, city_name, organization_id):
+def detail_view(request, city_name, organization_id):
     # city = city_name.title()
     # obj = Organization.objects.filter (pk=organization_id)
     return HttpResponse("detail view")

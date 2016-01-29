@@ -11,6 +11,6 @@ urlpatterns = [
     url(r'^cities/(?P<city_name>[a-z]+)/$', views.city, name='city'),
     url(r'^cities/(?P<city_name>[a-z]+)/add/$', views.add, name='add'),
     url(r'^cities/(?P<city_name>[a-z]+)/search/$', views.search, name='search'),
-    url(r'^cities/(?P<city_name>[a-z]+)/searchresult/$', views.searchresult, name='searchresult'),
-    url(r'^cities/(?P<city_name>[a-z]+)/(?P<organization_id>[0-9]+)/$', views.detailview, name='detailview'),
+    url(r'^cities/(?P<city_name>[a-z]+)/search_result/$', views.search_results, name='search_results'),
+    url(r'^cities/(?P<city_name>[a-z]+)/(?P<organization_id>[0-9]+)/$', views.detail_view, name='detail_view'),
 ]
