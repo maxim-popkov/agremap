@@ -1,7 +1,19 @@
 {% extends 'base.html' %}
 
+{% block title %}
+	Лучшие стоматологии Москвы
+{% endblock%}
+
+{% block navitop %}
+	{% include "agreapp/navigation_main_block.html" %}
+{% endblock %}
+
 {% block content %}
-<!-- Search Block -->
-{% include "agreapp/search_block.html" %}
-<!-- End Search Block -->
+	<!-- Search Block -->
+	{% include "agreapp/search_block.html" %}
+	<!-- End Search Block -->
+{% endblock %}
+
+{% block modals %}
+	{% include "agreapp/modals_block.html" %}
 {% endblock %}

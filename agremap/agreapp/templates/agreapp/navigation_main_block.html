@@ -1,0 +1,43 @@
+<nav class="navitop navbar navbar-default-bg navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand navitop__text navbar-link" href="#">AirDent</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-main">
+            <ul class="nav navbar-nav navitop__menu">
+                <!-- <li>
+                    <a class="navitop__town" href="#">Москва</a>
+                </li>      -->
+                <li class="dropdown">
+                    <a class="navitop__town dropdown-toggle" id="dropdownCitiesTop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Москва
+                    <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownCitiesTop">
+                        <li><a href="#">Балашиха</a></li>
+                        <li><a href="#">Белебей</a></li>
+                        <li><a href="#">Питер</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Паника</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right navitop__auth navitop__menu">
+                <li>
+                    <a href="#" class="navitop__enter navbar-link"
+                            data-toggle="modal" 
+                            data-target=".auth-modal">Войти</a>
+                </li>
+                <li>
+                    <a href="#" class="navitop__rega navbar-link">Регистрация</a>
+                </li>
+            </ul> 
+        </div>
+    </div> <!-- container -->
+</nav>
