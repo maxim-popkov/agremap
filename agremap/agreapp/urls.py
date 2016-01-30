@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'^chains/$', views.chains, name='chains'),
     # url(r'^clinics/add/$', views.clinics_add, name='clinics_add'),
     url(r'^clinics/add/$', views.OrganizationCreate.as_view(), name='clinics_add'),
+
     # Страница организаций для конкретного города
     url(r'^cities/(?P<city_name>[a-z]+)/$', views.city, name='city'),
     url(r'^cities/(?P<city_name>[a-z]+)/add/$', views.add, name='add'),

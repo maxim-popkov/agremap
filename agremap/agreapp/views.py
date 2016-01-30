@@ -26,15 +26,15 @@ def city(request, city_name):
 
 class OrganizationCreate(AjaxableResponseMixin, CreateView):
     form_class = OrganizationForm
-    template_name = 'agreapp/add_organization_form.html'
-    success_url = reverse_lazy('agreapp:index')
+    template_name = 'agreapp/add_clinic.html'
+    success_url = reverse_lazy('agreapp:clinics_add')
 
-    def form_invalid(self, form):
-        response = super(OrganizationCreate, self).form_invalid(form)
-        if self.request.is_ajax():
-            return JsonResponse(form.errors, status=400)
-        else:
-            return HttpResponseRedirect(reverse('agreapp:index'))
+    # def form_invalid(self, form):
+    #     response = super(OrganizationCreate, self).form_invalid(form)
+    #     if self.request.is_ajax():
+    #         return JsonResponse(form.errors, status=400)
+    #     else:
+    #         return HttpResponseRedirect(reverse('agreapp:index'))
 
 
 # def clinics_add(request):
