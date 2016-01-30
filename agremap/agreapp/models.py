@@ -34,7 +34,11 @@ class Organization(models.Model):
     is_deleted = models.BooleanField(default=False)
     is_approved = models.BooleanField(default=False)
     email_approve = models.EmailField()
-        
+
+    # def get_absolute_url(self):
+    #     from django.core.urlresolvers import reverse
+    #     return reverse('agreapp.views.detail_view', args=[str(self.id)])
+
     def __str__(self):
         return self.name
 
