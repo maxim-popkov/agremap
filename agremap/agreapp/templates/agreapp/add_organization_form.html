@@ -2,10 +2,12 @@
     <div class="modal-content">
         <form action="{% url 'agreapp:clinics_add' %}" role="form" method="post">
             {% csrf_token %}
-            <div class="modal-header"> 
+            <div class="modal-header">
+                {% if not on_main_page %}
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
-                </button> 
+                </button>
+                {% endif %}
                 <h4 class="modal-title" id="mySmallModalLabel">Добавьте организацию</h4> 
             </div>
               <div class="modal-body">
