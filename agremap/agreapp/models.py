@@ -16,8 +16,8 @@ class Organization(models.Model):
     website = models.URLField(max_length=64)
     num_views = models.IntegerField(default=0)
     
-    longitude = models.CharField(max_length=32)
-    latitude = models.CharField(max_length=32)
+    longitude = models.CharField(max_length=32, default='-1')
+    latitude = models.CharField(max_length=32, default='-1')
     srid = models.IntegerField(default=0)
     
     is_deleted = models.BooleanField(default=False)

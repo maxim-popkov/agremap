@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from agreapp.models import Organization
+from agreapp.forms import OrganizationForm
 
 # Create your views here.
 
@@ -14,6 +15,19 @@ def city(request, city_name):
     # city = city_name.title()
     # list_of_organizations = Organization.objects.filter(city=city_name)
     return HttpResponse("Here you can see all organizations in this city")
+
+def clinics_add(request):
+    output = ''
+    if request.method == 'POST':
+        form = OrganizationForm(request.POST)
+        if form.is_valid():
+            output += str(form)
+            output += 'success'
+        else:
+            output += 'not success'
+            output += str(form.errors)
+
+    return HttpResponse("Clinics Add " + output)
 
 def services(request):
     return HttpResponse("All services.")
