@@ -1,25 +1,20 @@
-{% extends 'base.html' %}
+{% extends 'agreapp/index.html' %}
 
 {% block title %}
-    Лучшие стоматологии Москвы
+    Добавить стоматологию
 {% endblock%}
 
-{% block navitop %}
-    {% include "agreapp/navigation_main_block.html" %}
-{% endblock %}
-
 {% block content %}
-    <div class="container-fluid results-list-block">
+<div class="container-fluid">
         <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                {% include "agreapp/add_organization_form.html" %}
-            </div>                      
-            <div class="col-md-2"></div>
+        {% if form.errors %}
+            <h2 class="page-central-text">Упс, что-то пошло не так!</h1>
+            <h3 class="page-central-text">Попробуйте снова</h2>
+        {% endif %}
         </div>
-    </div>
-{% endblock %}
+        <div class="row">
+            {% include "agreapp/add_organization_form.html" %}
+        </div>
+</div>
+ {% endblock %}
 
-{% block modals %}
-    {% include "agreapp/modals_block.html" %}
-{% endblock %}

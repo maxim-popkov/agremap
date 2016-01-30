@@ -1,5 +1,6 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic.edit import CreateView
+from django.views.generic import TemplateView
 from django.shortcuts import render, get_object_or_404
 
 from django.core.urlresolvers import reverse, reverse_lazy
@@ -23,33 +24,13 @@ def city(request, city_name):
     # list_of_organizations = Organization.objects.filter(city=city_name)
     return HttpResponse("Here you can see all organizations in this city")
 
+class OrganizationCreateSuccess(TemplateView):
+    template_name = 'agreapp/add_clinic_success.html'
 
 class OrganizationCreate(AjaxableResponseMixin, CreateView):
     form_class = OrganizationForm
     template_name = 'agreapp/add_clinic.html'
-    success_url = reverse_lazy('agreapp:clinics_add')
-
-    # def form_invalid(self, form):
-    #     response = super(OrganizationCreate, self).form_invalid(form)
-    #     if self.request.is_ajax():
-    #         return JsonResponse(form.errors, status=400)
-    #     else:
-    #         return HttpResponseRedirect(reverse('agreapp:index'))
-
-
-# def clinics_add(request):
-#     output = ''
-#     if request.method == 'POST':
-#         form = OrganizationForm(request.POST)
-#         if form.is_valid():
-#             output += str(form)
-#             output += 'success'
-#             form.save()
-#         else:
-#             output += 'not success'
-#             output += str(form.errors)
-
-#     return HttpResponseRedirect(reverse('agreapp:index'))
+    success_url = reverse_lazy('agreapp:clinic_add_success')
 
 def services(request):
     return HttpResponse("All services.")

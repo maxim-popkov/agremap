@@ -25,6 +25,21 @@ body {
     background-size:cover;
 }
 
+.page-central-text {
+    color: $font-main-color;
+    text-align: center;
+    font-weight: bold;
+}
+
+.page-central-block {
+    height: 450px;
+    text-align: center;
+    color: $font-main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .modal-header {
     background-color: $theme-main-color;
     color: $font-main-color;

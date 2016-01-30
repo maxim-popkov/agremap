@@ -8799,32 +8799,49 @@ body {
 }
 
 /* line 28, ../sass/styles.scss */
+.page-central-text {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* line 34, ../sass/styles.scss */
+.page-central-block {
+  height: 450px;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 43, ../sass/styles.scss */
 .modal-header {
   background-color: #3b9487;
   color: white;
 }
 
-/* line 33, ../sass/styles.scss */
+/* line 48, ../sass/styles.scss */
 .navbar-toggle .icon-bar {
   background-color: white;
 }
 
-/* line 37, ../sass/styles.scss */
+/* line 52, ../sass/styles.scss */
 .navitop {
   opacity: 0.85;
   color: white;
 }
-/* line 40, ../sass/styles.scss */
+/* line 55, ../sass/styles.scss */
 .navitop_filled {
   background-color: #3b9487;
 }
 
-/* line 45, ../sass/styles.scss */
+/* line 60, ../sass/styles.scss */
 .navitop__text {
   color: white;
 }
 
-/* line 49, ../sass/styles.scss */
+/* line 64, ../sass/styles.scss */
 .navitop__town {
   color: white;
   text-decoration: dotted;
@@ -8832,7 +8849,7 @@ body {
   font-size: 16px;
 }
 
-/* line 56, ../sass/styles.scss */
+/* line 71, ../sass/styles.scss */
 .navitop__town:hover, .navitop__town:visited, .navitop__town:active, .navitop__town:focus {
   color: white;
   text-decoration: dotted;
@@ -8840,46 +8857,46 @@ body {
   font-size: 16px;
 }
 
-/* line 63, ../sass/styles.scss */
+/* line 78, ../sass/styles.scss */
 .navitop .open > a, .navitop .open > a:focus, .navitop .open > a:hover {
   background-color: #3b9487;
   border-color: #3b9487;
 }
 
 @media (max-width: 767px) {
-  /* line 69, ../sass/styles.scss */
+  /* line 84, ../sass/styles.scss */
   .navbar-nav .open .dropdown-menu {
     background-color: #fff;
   }
 }
-/* line 75, ../sass/styles.scss */
+/* line 90, ../sass/styles.scss */
 .navitop__enter:visited {
   color: white;
   text-decoration: none;
 }
 
-/* line 80, ../sass/styles.scss */
+/* line 95, ../sass/styles.scss */
 .navitop__menu > li > a:hover, .navitop__menu > li > a:focus {
   color: cyan;
 }
 
-/* line 86, ../sass/styles.scss */
+/* line 101, ../sass/styles.scss */
 .navitop__rega {
   color: white;
 }
 
-/* line 90, ../sass/styles.scss */
+/* line 105, ../sass/styles.scss */
 .navbar-link {
   color: white;
 }
 
-/* line 94, ../sass/styles.scss */
+/* line 109, ../sass/styles.scss */
 .navbar-link:hover, .navbar-link:visited, .navbar-link:active {
   color: white;
   text-decoration: none;
 }
 
-/* line 100, ../sass/styles.scss */
+/* line 115, ../sass/styles.scss */
 .cover-container {
   height: 450px;
   width: 700px;
@@ -8889,7 +8906,7 @@ body {
   display: table-cell;
 }
 
-/* line 109, ../sass/styles.scss */
+/* line 124, ../sass/styles.scss */
 .center-wrapper {
   display: table;
   width: 100%;
@@ -8897,7 +8914,7 @@ body {
   min-height: 100%;
 }
 
-/* line 116, ../sass/styles.scss */
+/* line 131, ../sass/styles.scss */
 .center-block {
   width: 700px;
   display: block;
@@ -8905,13 +8922,13 @@ body {
   margin-left: auto;
 }
 
-/* line 123, ../sass/styles.scss */
+/* line 138, ../sass/styles.scss */
 .results-list-block {
   padding-top: 10px;
   background-color: rgba(215, 228, 211, 0.75);
 }
 
-/* line 128, ../sass/styles.scss */
+/* line 143, ../sass/styles.scss */
 .thumbnail-with-data {
   position: relative;
   padding: 0px;
@@ -8919,22 +8936,22 @@ body {
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/* line 142, ../sass/styles.scss */
+/* line 157, ../sass/styles.scss */
 .thumbnail-with-data > .caption > address > .caption-metro > i {
   margin-right: 15px;
   font-weight: bold;
   font-style: normal;
 }
-/* line 148, ../sass/styles.scss */
+/* line 163, ../sass/styles.scss */
 .thumbnail-with-data > .caption i {
   margin-right: 10px;
 }
-/* line 152, ../sass/styles.scss */
+/* line 167, ../sass/styles.scss */
 .thumbnail-with-data > .btn {
   width: 100%;
   border-radius: 0px 0px 5px 5px;
 }
-/* line 157, ../sass/styles.scss */
+/* line 172, ../sass/styles.scss */
 .thumbnail-with-data__data {
   position: absolute;
   z-index: 1;
@@ -8943,7 +8960,7 @@ body {
   width: 100%;
   height: 60%;
 }
-/* line 165, ../sass/styles.scss */
+/* line 180, ../sass/styles.scss */
 .thumbnail-with-data__name {
   color: white;
   position: absolute;
@@ -8951,12 +8968,12 @@ body {
   width: 100%;
   padding: 10px;
 }
-/* line 171, ../sass/styles.scss */
+/* line 186, ../sass/styles.scss */
 .thumbnail-with-data__name > h3 {
   font-style: bold;
 }
 
-/* line 177, ../sass/styles.scss */
+/* line 192, ../sass/styles.scss */
 .search-block {
   height: 450px;
   text-align: center;
@@ -8965,42 +8982,42 @@ body {
   align-items: center;
 }
 
-/* line 185, ../sass/styles.scss */
+/* line 200, ../sass/styles.scss */
 .search-block__header-one {
   text-align: center;
   color: white;
   font-weight: bold;
 }
 
-/* line 191, ../sass/styles.scss */
+/* line 206, ../sass/styles.scss */
 .search-block__header-two {
   text-align: center;
   color: white;
 }
 
-/* line 196, ../sass/styles.scss */
+/* line 211, ../sass/styles.scss */
 .search-block__search_input {
   /*  height: 45px;
   */
 }
 
-/* line 200, ../sass/styles.scss */
+/* line 215, ../sass/styles.scss */
 .search-block_link {
   margin-bottom: 2em;
 }
-/* line 202, ../sass/styles.scss */
+/* line 217, ../sass/styles.scss */
 .search-block_link > a, .search-block_link a:visited, .search-block_link a:focus, .search-block_link a:active {
   color: white;
   border-bottom: 1px dotted white;
   text-decoration: none;
 }
-/* line 207, ../sass/styles.scss */
+/* line 222, ../sass/styles.scss */
 .search-block_link > a:hover {
   border-bottom: 1px dotted #3b9487;
   text-decoration: none;
 }
 
-/* line 215, ../sass/styles.scss */
+/* line 230, ../sass/styles.scss */
 .search-block__search_btn {
   background-color: #3b9487;
   color: white;
@@ -9008,36 +9025,30 @@ body {
   /*height: 45px;*/
 }
 
-/* line 222, ../sass/styles.scss */
+/* line 237, ../sass/styles.scss */
 .search-block__city {
   color: white;
   text-decoration: none;
   border-bottom: 1px dotted white;
 }
 
-/* line 228, ../sass/styles.scss */
+/* line 243, ../sass/styles.scss */
 .search-block__city:hover, .search-block__city:visited, .search-block__city:active, .search-block__city:focus {
   color: white;
   text-decoration: none;
   border-bottom: 1px dotted white;
 }
 
-/* line 235, ../sass/styles.scss */
+/* line 250, ../sass/styles.scss */
 .search-block__search_btn:hover, .search-block__search_btn:focus, .search-block__search_btn:active, .search-block__search_btn.active, .open > .dropdown-toggle.search-block__search_btn {
   background-color: #3b9487;
   color: white;
 }
 
-/* line 240, ../sass/styles.scss */
+/* line 255, ../sass/styles.scss */
 .footer {
   padding-top: 20px;
   margin-top: 100px;
   color: #828299;
   background-color: rgba(0, 0, 0, 0.66);
-}
-
-/* line 248, ../sass/styles.scss */
-.form-block {
-  padding: 10px;
-  background-color: white;
 }
