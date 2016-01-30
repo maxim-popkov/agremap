@@ -10,7 +10,6 @@
             </div>
             <div class="modal-body">
                 <form action="{% url 'agreapp:clinics_add' %}" role="form" method="post">
-                    {% csrf_token %}
                     <div class="form-group">
                         <input type="text" class="form-control" 
                                placeholder="Название" 
@@ -67,16 +66,16 @@
                             <span class="input-group-addon">@</span>
                             <input type="text" class="form-control" 
                                    placeholder="*Ваша почта"
-                                   name="email_approve" 
+                                   name="email" 
                                    required>
                         </div> <!-- /.form-group -->
                     </div>
-                <div class="modal-footer">
-                    <button class="form-control btn btn-primary">Добавить</button>
-                </div> 
                 </form> <!-- /.checkbox -->
-                <!-- /.modal-footer -->
             </div>
+            <div class="modal-footer">
+                <button class="form-control btn btn-primary">Добавить</button>
+            </div> 
+                <!-- /.modal-footer -->
         </div>
     </div>  
 </div>

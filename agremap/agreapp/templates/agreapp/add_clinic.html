@@ -9,21 +9,12 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid">
+    <div class="container-fluid results-list-block">
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <div class="modal-dialog modal-md">
-                    <div class="modal-content">
-                        <div class="modal-header"> 
-                            <h4 class="modal-title" id="mySmallModalLabel">Добавьте организацию</h4> 
-                        </div>
-                        <div class="modal-body">
-                            {% include "agreapp/add_organization_form.html" %}                          <!-- /.modal-footer -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+                {% include "agreapp/add_organization_form.html" %}
+            </div>                      
             <div class="col-md-2"></div>
         </div>
     </div>
