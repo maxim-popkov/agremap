@@ -23,6 +23,7 @@ def clinics_add(request):
         if form.is_valid():
             output += str(form)
             output += 'success'
+            form.save()
         else:
             output += 'not success'
             output += str(form.errors)

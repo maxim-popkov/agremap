@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import (Organization, 
-                    Metropoliten, MetropolitenOrg, 
+                    Metropoliten, 
                     Service, ServiceOrg, 
                     Schedule, ScheduleOrg)
 
@@ -17,8 +17,8 @@ class MetropolitenAdmin(admin.ModelAdmin):
     pass
 
 
-class MetropolitenOrgAdmin(admin.ModelAdmin):
-    pass
+# class MetropolitenOrgAdmin(admin.ModelAdmin):
+#     pass
 
 
 #Service Admin Settings
