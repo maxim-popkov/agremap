@@ -1,6 +1,9 @@
 <div class="modal-dialog modal-md">
     <div class="modal-content">
-        <form action="{% url 'agreapp:clinics_add' %}" role="form" method="post">
+        <form action="{% url 'agreapp:clinics_add' %}" 
+              role="form" 
+              method="post" 
+              class="organization-add-form">
             {% csrf_token %}
             <div class="modal-header">
                 {% if not on_main_page %}
@@ -73,7 +76,14 @@
                       </div>
               </div>
               <div class="modal-footer">
-                  <button class="form-control btn btn-primary">Добавить</button>
+                  <button class="form-control btn btn-primary organization-add-form__btn-add">Добавить</button>
+                  {% if not on_main_page %}
+                    <button type="button" style="display:none" 
+                            class="form-control btn btn-primary organization-add-form__btn-close" 
+                            data-dismiss="modal" aria-label="Close">
+                    Спасибо! Клиника добавлена на рассмотрение | Закрыть
+                    </button>
+                  {% endif %}
               </div> 
                   <!-- /.modal-footer -->
           </form> <!-- /.checkbox -->
