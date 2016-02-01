@@ -9,7 +9,9 @@ from django.apps import apps
 
 #Organization Admin Settings
 class OrganizationAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('name', 'city', 'address', 'is_deleted', 
+                    'is_approved', 'num_views', 'phone_number', 'website')
+
 
 
 #Metropoliten Admin Settings
@@ -41,7 +43,9 @@ class ScheduleOrgAdmin(admin.ModelAdmin):
 
 
 # Register your models here.
-admin_registr = [] # (Organization, OrganizationAdmin)
+admin_registr = [(Organization, OrganizationAdmin)] # (Organization, OrganizationAdmin)
+for model, model_admin in admin_registr:
+    admin.site.register(model, model_admin)
 
 # автомтаически регистрирует все модели из приложения
 # если регистрируется новая модель со специальными настройками, её нужно отсюда исключить
