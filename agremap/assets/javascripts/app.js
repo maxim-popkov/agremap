@@ -21,13 +21,21 @@ $(document).ready(function () {
     }
 
     //events
-    $('.organization-add-form').validator().on('submit', function (event) {
+    var validatorSettings = {
+        disable: true
+    }
+
+    $('.organization-add-form').validator(validatorSettings).on('submit', function (event) {
         if (!event.isDefaultPrevented()) {
             event.preventDefault();
             console.log('form submit routine');
             add_organization(event.target);
         } 
     });
+
+    // $('.modal').on('shown.bs.modal', function() {
+    //     $('.organization-add-form').validator('validate');
+    // });
 
     $('.modal').on('hidden.bs.modal', function (e) {
         console.log('form closed');
