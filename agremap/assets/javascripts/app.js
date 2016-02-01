@@ -11,8 +11,10 @@ $(document).ready(function () {
             success: function (data) {
                 frm.find('.organization-add-form__btn-add').hide();
                 frm.find('.organization-add-form__btn-close').show();
+                swal("Спасибо!", "Клиника ушла на рассмотрение!", "success")
             },
             error: function(data) {
+                swal("Упс!", "Что-то пошло не так, попробуйте снова!", "error")
                 console.log(data);
             }
         });

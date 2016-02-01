@@ -24,6 +24,9 @@
     {% block styles %}
     <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{% static '/assets/stylesheets/styles.css' %}">
+    <!-- plugins -->
+    <link rel="stylesheet" href="{% static '/assets/bower_components/sweetalert/dist/sweetalert.css' %}">
+    <!-- end-plugins -->
     {% endblock %}
     <!-- end-styles -->
 </head>
@@ -46,10 +49,11 @@
         <div class="row">
             <div class="col-md-3 col-md-offset-3">
                 <ul>
-                    <li><a  href="#" 
+                    <li>
+                        <a  href="#" 
                             data-toggle="modal" 
                             data-target=".add_place-modal">
-                        <strong>Добавить организацию</strong>
+                            <strong>Добавить организацию</strong>
                         </a>
                     </li>
                     <li><a href="#">Для организаций</a></li>
@@ -77,6 +81,10 @@
                 charset="utf-8">
         </script>
         <script src="{% static '/assets/javascripts/app.js' %}" 
+                type="text/javascript" 
+                charset="utf-8" async>
+        </script>
+        <script src="{% static '/assets/bower_components/sweetalert/dist/sweetalert.min.js' %}" 
                 type="text/javascript" 
                 charset="utf-8" async>
         </script>
