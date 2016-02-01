@@ -24,13 +24,6 @@ def city(request, city_name):
     # list_of_organizations = Organization.objects.filter(city=city_name)
     return HttpResponse("Here you can see all organizations in this city")
 
-class OrganizationCreateSuccess(TemplateView):
-    template_name = 'agreapp/add_clinic_success.html'
-
-class OrganizationCreate(AjaxableResponseMixin, CreateView):
-    form_class = OrganizationForm
-    template_name = 'agreapp/add_clinic.html'
-    success_url = reverse_lazy('agreapp:clinic_add_success')
 
 def services(request):
     return HttpResponse("All services.")
@@ -54,3 +47,15 @@ def detail_view(request, city_name, organization_id):
     # city = city_name.title()
     # obj = Organization.objects.filter (pk=organization_id)
     return HttpResponse("detail view")
+
+
+#==== Class Based Views ====
+
+class OrganizationCreateSuccess(TemplateView):
+    template_name = 'agreapp/add_clinic_success.html'
+
+
+class OrganizationCreate(AjaxableResponseMixin, CreateView):
+    form_class = OrganizationForm
+    template_name = 'agreapp/add_clinic.html'
+    success_url = reverse_lazy('agreapp:clinic_add_success')
