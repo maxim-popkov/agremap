@@ -3,7 +3,8 @@
         <form action="{% url 'agreapp:clinics_add' %}" 
               role="form" 
               method="post" 
-              class="organization-add-form">
+              class="organization-add-form"
+              data-toggle="validator">
             {% csrf_token %}
             <div class="modal-header">
                 {% if not on_main_page %}
@@ -18,13 +19,16 @@
                           <input type="text" class="form-control" 
                                  placeholder="Название" 
                                  name="name"
-                                 required>
+                                 required
+                                 data-minlength="5"
+                                 maxlength="128">
                       </div>
                       <div class="form-group">
                           <input type="text" class="form-control" 
                                  placeholder="Адрес"
                                  name="address" 
-                                 required>
+                                 required
+                                 maxlength="256">
                       </div>
 
                       <div class="row">
@@ -33,25 +37,28 @@
                                   <input type="text" class="form-control" 
                                          placeholder="Город"
                                          name="city" 
-                                         required>
+                                         required
+                                         maxlength="64">
                               </div>
                               <div class="form-group">
                                   <input type="text" class="form-control" 
                                          placeholder="Телефон"
-                                         name="phone_number" 
-                                         required>
+                                         name="phone_number"
+                                         pattern="^((8|\+7)-?)?\(?\d{3}\)?-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}$">
                               </div>
                           </div>
                           <div class="col-md-6">
                               <div class="form-group">
                                   <input type="text" class="form-control" 
                                          placeholder="Метро"
-                                         name="metropoliten">
+                                         name="metropoliten"
+                                         maxlength="128">
                               </div>
                               <div class="form-group">
-                                  <input type="text" class="form-control" 
+                                  <input type="url" class="form-control" 
                                          placeholder="Сайт"
-                                         name="website">
+                                         name="website"
+                                         maxlength="64">
                               </div>
                               
                           </div>
@@ -68,7 +75,7 @@
                       <div class="form-group">
                           <div class="input-group">
                               <span class="input-group-addon">@</span>
-                              <input type="text" class="form-control" 
+                              <input type="email" class="form-control" 
                                      placeholder="*Ваша почта"
                                      name="email_approve" 
                                      required>

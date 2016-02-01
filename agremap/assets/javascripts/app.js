@@ -21,10 +21,12 @@ $(document).ready(function () {
     }
 
     //events
-    $('.organization-add-form').on('submit', function (event) {
-        event.preventDefault();
-        console.log('form submit routine');
-        add_organization(event.target);
+    $('.organization-add-form').validator().on('submit', function (event) {
+        if (!event.isDefaultPrevented()) {
+            event.preventDefault();
+            console.log('form submit routine');
+            add_organization(event.target);
+        } 
     });
 
     $('.modal').on('hidden.bs.modal', function (e) {
