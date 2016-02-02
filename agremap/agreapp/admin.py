@@ -11,6 +11,7 @@ from django.apps import apps
 class OrganizationAdmin(admin.ModelAdmin):
     list_display = ('name', 'city', 'address', 'is_deleted', 
                     'is_approved', 'num_views', 'phone_number', 'website')
+    filter_horizontal = ('metropolitens',)
 
 
 

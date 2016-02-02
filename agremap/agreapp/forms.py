@@ -14,9 +14,10 @@ class OrganizationForm(forms.ModelForm):
         org = super(OrganizationForm, self).save(commit=False, *args, **kwargs)
         if commit:
             org.save()
-            st = Metropoliten(city=self.cleaned_data['city'], 
+            if self.cleaned_data['metropoliten']:
+                st = Metropoliten(city=self.cleaned_data['city'], 
                               station=self.cleaned_data['metropoliten'])
-            st.save()
-            org.metropolitens.add(st)
+                st.save()
+                org.metropolitens.add(st)
             org.save()
         return org
