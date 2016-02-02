@@ -1,10 +1,16 @@
 from django.contrib import admin
-from .models import (Organization, 
+from .models import (Organization, OrganizationRequest,
                     Metropoliten, 
                     Service, ServiceOrg, 
                     Schedule, ScheduleOrg)
 
 from django.apps import apps
+
+
+#Organization Admin Settings
+class OrganizationRequestAdmin(admin.ModelAdmin):
+    list_display = ('name', 'city', 'address', 'is_deleted', 
+                    'is_approved', 'phone_number', 'website', 'metropoliten')
 
 
 #Organization Admin Settings
@@ -44,7 +50,8 @@ class ScheduleOrgAdmin(admin.ModelAdmin):
 
 
 # Register your models here.
-admin_registr = [(Organization, OrganizationAdmin)] # (Organization, OrganizationAdmin)
+admin_registr = [(Organization, OrganizationAdmin),
+                 (OrganizationRequest, OrganizationRequestAdmin)] # (Organization, OrganizationAdmin)
 for model, model_admin in admin_registr:
     admin.site.register(model, model_admin)
 
