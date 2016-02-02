@@ -1,6 +1,14 @@
 from django import forms
-from agreapp.models import Organization, Metropoliten
+from agreapp.models import OrganizationRequest, Organization, Metropoliten
 
+
+class OrganizationRequestForm(forms.ModelForm):
+
+    class Meta:
+        model = OrganizationRequest
+        exclude = ['is_deleted', 'is_approved']
+
+# now dont used
 class OrganizationForm(forms.ModelForm):
 
     metropoliten = forms.CharField(max_length=32, required=False)

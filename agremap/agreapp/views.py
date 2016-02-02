@@ -5,7 +5,7 @@ from django.shortcuts import render, get_object_or_404
 
 from django.core.urlresolvers import reverse, reverse_lazy
 
-from agreapp.forms import OrganizationForm
+from agreapp.forms import OrganizationRequestForm
 
 from agreapp.models import Organization
 from agreapp.forms import OrganizationForm
@@ -56,6 +56,6 @@ class OrganizationCreateSuccess(TemplateView):
 
 
 class OrganizationCreate(AjaxableResponseMixin, CreateView):
-    form_class = OrganizationForm
+    form_class = OrganizationRequestForm
     template_name = 'agreapp/add_clinic.html'
     success_url = reverse_lazy('agreapp:clinic_add_success')

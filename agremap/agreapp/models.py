@@ -43,6 +43,27 @@ class Organization(models.Model):
         return self.name
 
 
+class OrganizationRequest(models.Model):
+    """docstring for Organization"""
+    # required in form fields
+    name = models.CharField(max_length=128, blank=False)
+    city = models.CharField(max_length=64, blank=False)
+    address = models.CharField(max_length=256, blank=False)
+    email_approve = models.EmailField(blank=False)
+    
+    metropoliten = models.CharField(max_length=32, blank=True)
+    phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")
+    phone_number = models.CharField(max_length=64, validators=[phone_regex], blank=True) # validators should be a list
+    website = models.URLField(max_length=64, blank=True)
+    description = models.TextField(max_length=2048, blank=True)
+    
+    is_deleted = models.BooleanField(default=False)
+    is_approved = models.BooleanField(default=False)
+
+    related_org = models.OneToOneField(Organization, blank=True, null=True)
+
+
+
 #model for schedule
 class Schedule(models.Model):
     """docstring for Schedule"""
