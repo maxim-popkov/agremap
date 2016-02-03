@@ -157,6 +157,14 @@ body {
     //     width: 100%;
     // }
 
+    // truncate text data from "hello world" to "hello wo..." 
+    & * {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
     &>.caption>address>.caption-metro>i {
         margin-right: 15px;
         font-weight: bold;

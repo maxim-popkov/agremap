@@ -4,26 +4,26 @@
     <div class="row">
     <!--hack: repeat four times -->
     {% for org in organization_list %}
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="thumbnail-with-data thumbnail">
                     <div class="thumbnail-with-data__img-block">
                         <img class="thumbnail-with-data__img" 
                              src="{% static '/assets/images/thumb.jpg' %}" 
                              alt="{{org.name}}">
                         <div class="thumbnail-with-data__img-info">
-                            <h3>{{org.name | truncatechars:32}}</h3>
+                            <h3>{{org.name}}</h3>
                         </div>    
                     </div>
                     <div class="caption">
                         <address class="row">
                             <div class="col-md-12">
-                                <p><i class="glyphicon glyphicon-home"></i>{{org.address | truncatechars:32}}</p>
+                                <p><i class="glyphicon glyphicon-home"></i>{{org.address}}</p>
                             </div>
                             <div class="col-md-6">
                                 <p class="caption-metro"><i>M</i>Метро</p>
                                 {% if org.phone_number %}
                                 <div>
-                                    <a href="tel:{{org.phone_number}}"><i class="glyphicon glyphicon-earphone"></i> {{org.phone_number | truncatechars:12}}</a>       
+                                    <a href="tel:{{org.phone_number}}"><i class="glyphicon glyphicon-earphone"></i> {{org.phone_number}}</a>       
                                 </div>
                                 {% endif %}
                             </div>
@@ -31,7 +31,9 @@
                                 <p class="caption-metro"><i class="glyphicon glyphicon-time"></i>Работает</p>
                                 {% if org.website %}
                                 <div>
-                                    <a href="{{org.website}}"><i class="glyphicon glyphicon-cloud"></i>{{org.website | urlizetrunc:12}}</a>                            
+                                    <a href="{{org.website}}" rel="nofollow">
+                                        <i class="glyphicon glyphicon-cloud"></i>{{org.website | cut:"http://"}}
+                                    </a>
                                 </div>
                                 {% endif %}
                             </div>

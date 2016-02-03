@@ -8939,26 +8939,32 @@ body {
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/* line 160, ../sass/styles.scss */
+/* line 161, ../sass/styles.scss */
+.thumbnail-with-data * {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 168, ../sass/styles.scss */
 .thumbnail-with-data > .caption > address > .caption-metro > i {
   margin-right: 15px;
   font-weight: bold;
   font-style: normal;
 }
-/* line 166, ../sass/styles.scss */
+/* line 174, ../sass/styles.scss */
 .thumbnail-with-data > .caption i {
   margin-right: 10px;
 }
-/* line 170, ../sass/styles.scss */
+/* line 178, ../sass/styles.scss */
 .thumbnail-with-data > .btn {
   width: 100%;
   border-radius: 0px 0px 5px 5px;
 }
-/* line 175, ../sass/styles.scss */
+/* line 183, ../sass/styles.scss */
 .thumbnail-with-data__img-block {
   position: relative;
 }
-/* line 179, ../sass/styles.scss */
+/* line 187, ../sass/styles.scss */
 .thumbnail-with-data__img {
   display: block;
   max-width: 100%;
@@ -8966,7 +8972,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 188, ../sass/styles.scss */
+/* line 196, ../sass/styles.scss */
 .thumbnail-with-data__img-info {
   position: absolute;
   left: 0;
@@ -8981,7 +8987,7 @@ body {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
 }
 
-/* line 204, ../sass/styles.scss */
+/* line 212, ../sass/styles.scss */
 .search-block {
   height: 450px;
   text-align: center;
@@ -8990,42 +8996,42 @@ body {
   align-items: center;
 }
 
-/* line 212, ../sass/styles.scss */
+/* line 220, ../sass/styles.scss */
 .search-block__header-one {
   text-align: center;
   color: white;
   font-weight: bold;
 }
 
-/* line 218, ../sass/styles.scss */
+/* line 226, ../sass/styles.scss */
 .search-block__header-two {
   text-align: center;
   color: white;
 }
 
-/* line 223, ../sass/styles.scss */
+/* line 231, ../sass/styles.scss */
 .search-block__search_input {
   /*  height: 45px;
   */
 }
 
-/* line 227, ../sass/styles.scss */
+/* line 235, ../sass/styles.scss */
 .search-block_link {
   margin-bottom: 2em;
 }
-/* line 229, ../sass/styles.scss */
+/* line 237, ../sass/styles.scss */
 .search-block_link > a, .search-block_link a:visited, .search-block_link a:focus, .search-block_link a:active {
   color: white;
   border-bottom: 1px dotted white;
   text-decoration: none;
 }
-/* line 234, ../sass/styles.scss */
+/* line 242, ../sass/styles.scss */
 .search-block_link > a:hover {
   border-bottom: 1px dotted #3b9487;
   text-decoration: none;
 }
 
-/* line 242, ../sass/styles.scss */
+/* line 250, ../sass/styles.scss */
 .search-block__search_btn {
   background-color: #3b9487;
   color: white;
@@ -9033,27 +9039,27 @@ body {
   /*height: 45px;*/
 }
 
-/* line 249, ../sass/styles.scss */
+/* line 257, ../sass/styles.scss */
 .search-block__city {
   color: white;
   text-decoration: none;
   border-bottom: 1px dotted white;
 }
 
-/* line 255, ../sass/styles.scss */
+/* line 263, ../sass/styles.scss */
 .search-block__city:hover, .search-block__city:visited, .search-block__city:active, .search-block__city:focus {
   color: white;
   text-decoration: none;
   border-bottom: 1px dotted white;
 }
 
-/* line 262, ../sass/styles.scss */
+/* line 270, ../sass/styles.scss */
 .search-block__search_btn:hover, .search-block__search_btn:focus, .search-block__search_btn:active, .search-block__search_btn.active, .open > .dropdown-toggle.search-block__search_btn {
   background-color: #3b9487;
   color: white;
 }
 
-/* line 267, ../sass/styles.scss */
+/* line 275, ../sass/styles.scss */
 .footer {
   padding-top: 20px;
   margin-top: 100px;
