@@ -1,5 +1,13 @@
 {% load staticfiles %}
 <!-- Search Results -->
+{% if not organization_list %}
+<div class="container-fluid vertical-center">
+        <div class="row">
+            <h1 class="page-central-text">Упс! Попробуйте снова.</h1>
+            <h2 class="page-central-text">По вашему запросу ничего не найдено</h2>
+        </div>
+</div>
+{% else %}
 <div class="container-fluid results-list-block">
     <div class="row">
     <!--hack: repeat four times -->
@@ -43,6 +51,7 @@
                 </div>
             </div>
     {% endfor %}
+    {% endif %}
     </div> 
 </div>
 <!-- End Search Results -->
