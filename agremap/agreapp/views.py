@@ -69,11 +69,12 @@ class OrganizationSearchView(ListView):
                 name = form.cleaned_data['search_name']
             except:
                 name = ''
+                
         organization_list = None
         if name != '':
             organization_list = self.model.objects.filter(name__icontains = name)
         else:
-            organization_list = self.model.objects.all()
+            organization_list = []
         return organization_list
 
 
