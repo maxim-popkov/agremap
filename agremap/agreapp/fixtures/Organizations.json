@@ -1,0 +1,128 @@
+[
+    {
+        "model": "agreapp.organization",
+        "pk": 1,
+        "fields": {
+            "name": "Стоматология",
+            "description": "Лучшая стоматология в городе",
+            "city": "Moscow",
+            "address": "ул. Ленина д.1",
+            "metropolitens": "Сокольники",
+            "phone_number": "+999999999",
+            "website": "www.example.org",
+            "email_approve": "exam@ple.org"
+        }
+    },
+    {
+        "model": "agreapp.organization",
+        "pk": 2,
+        "fields": {
+            "name": "Стоматология",
+            "description": "Лучшая стоматология в городе",
+            "city": "Moscow",
+            "address": "ул. Ленина д.1",
+            "metropolitens": "Сокольники",
+            "phone_number": "+999999999",
+            "website": "www.example.org",
+            "email_approve": "exam@ple.org"
+        }
+    },
+    {
+        "model": "agreapp.organization",
+        "pk": 3,
+        "fields": {
+            "name": "Стоматология",
+            "description": "Лучшая стоматология в городе",
+            "city": "Moscow",
+            "address": "ул. Ленина д.1",
+            "metropolitens": "Сокольники",
+            "phone_number": "+999999999",
+            "website": "www.example.org",
+            "email_approve": "exam@ple.org"
+        }
+    },
+    {
+        "model": "agreapp.organization",
+        "pk": 4,
+        "fields": {
+            "name": "Стоматология",
+            "description": "Лучшая стоматология в городе",
+            "city": "Moscow",
+            "address": "ул. Ленина д.1",
+            "metropolitens": "Сокольники",
+            "phone_number": "+999999999",
+            "website": "www.example.org",
+            "email_approve": "exam@ple.org"
+        }
+    },
+    {
+        "model": "agreapp.organization",
+        "pk": 5,
+        "fields": {
+            "name": "Стоматология",
+            "description": "Лучшая стоматология в городе",
+            "city": "Moscow",
+            "address": "ул. Ленина д.1",
+            "metropolitens": "Сокольники",
+            "phone_number": "+999999999",
+            "website": "www.example.org",
+            "email_approve": "exam@ple.org"
+        }
+    },
+    {
+        "model": "agreapp.organization",
+        "pk": 6,
+        "fields": {
+            "name": "Стоматология",
+            "description": "Лучшая стоматология в городе",
+            "city": "Moscow",
+            "address": "ул. Ленина д.1",
+            "metropolitens": "Сокольники",
+            "phone_number": "+999999999",
+            "website": "www.example.org",
+            "email_approve": "exam@ple.org"
+        }
+    },
+    {
+        "model": "agreapp.organization",
+        "pk": 7,
+        "fields": {
+            "name": "Стоматология",
+            "description": "Лучшая стоматология в городе",
+            "city": "Moscow",
+            "address": "ул. Ленина д.1",
+            "metropolitens": "Сокольники",
+            "phone_number": "+999999999",
+            "website": "www.example.org",
+            "email_approve": "exam@ple.org"
+        }
+    },
+    {
+        "model": "agreapp.organization",
+        "pk": 8,
+        "fields": {
+            "name": "Стоматология",
+            "description": "Лучшая стоматология в городе",
+            "city": "Moscow",
+            "address": "ул. Ленина д.1",
+            "metropolitens": "Сокольники",
+            "phone_number": "+999999999",
+            "website": "www.example.org",
+            "email_approve": "exam@ple.org"
+        }
+    },
+    {
+        "model": "agreapp.organization",
+        "pk": 9,
+        "fields": {
+            "name": "Стоматология",
+            "description": "Лучшая стоматология в городе",
+            "city": "Moscow",
+            "address": "ул. Ленина д.1",
+            "metropolitens": "Сокольники",
+            "phone_number": "+999999999",
+            "website": "www.example.org",
+            "email_approve": "exam@ple.org"
+        }
+    }
+]

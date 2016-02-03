@@ -73,6 +73,8 @@ class OrganizationSearchView(ListView):
         organization_list = None
         if name != '':
             organization_list = self.model.objects.filter(name__icontains = name)
+        if not organization_list:
+            organization_list = self.model.objects.filter(city = name)
         else:
             organization_list = []
         return organization_list
