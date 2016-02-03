@@ -2,6 +2,10 @@ from django import forms
 from agreapp.models import OrganizationRequest, Organization, Metropoliten
 
 
+class OrganizationSearchForm(forms.Form):
+    search_name = forms.CharField(max_length=128)
+
+
 class OrganizationRequestForm(forms.ModelForm):
 
     class Meta:

@@ -1,17 +1,18 @@
+# Utils
 from django.http import HttpResponse, HttpResponseRedirect
-from django.views.generic.edit import CreateView
-from django.views.generic import TemplateView
 from django.shortcuts import render, get_object_or_404
-
 from django.core.urlresolvers import reverse, reverse_lazy
-
-from agreapp.forms import OrganizationRequestForm
+# Views
+from django.views.generic.edit import CreateView
+from django.views.generic import TemplateView, ListView
+# Forms
+from django.views.generic.edit import FormMixin
+# App moduls
+from agreapp.forms import OrganizationRequestForm, OrganizationForm, OrganizationSearchForm
 
 from agreapp.models import Organization
-from agreapp.forms import OrganizationForm
 from agreapp.mixins import AjaxableResponseMixin
 
-# Create your views here.
 
 def index(request):
     return render(request, 'agreapp/index.html')
@@ -50,6 +51,26 @@ def detail_view(request, city_name, organization_id):
 
 
 #==== Class Based Views ====
+class IndexView():
+    pass
+
+
+class OrganizationSearchView(ListView):
+    model = Organization
+    template_name = 'agreapp/search_results.html'
+#     form_class = OrganizationSearchForm
+
+#     def get_queryset(self):
+#         try:
+#             name = self.kwargs['name']
+#         except:
+#             name = ''
+#         if name != '':
+#             object_list = self.model.objects.filter(name__icontains = name)
+#         else:
+#             object_list = self.model.objects.all()
+#         return object_list
+
 
 class OrganizationCreateSuccess(TemplateView):
     template_name = 'agreapp/add_clinic_success.html'
