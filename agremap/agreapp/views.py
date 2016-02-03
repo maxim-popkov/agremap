@@ -58,6 +58,7 @@ class IndexView():
 class OrganizationSearchView(ListView):
     model = Organization
     template_name = 'agreapp/search_results.html'
+    context_object_name="organization_list"
 #     form_class = OrganizationSearchForm
 
 #     def get_queryset(self):
