@@ -59,18 +59,22 @@ class OrganizationSearchView(ListView):
     model = Organization
     template_name = 'agreapp/search_results.html'
     context_object_name="organization_list"
-#     form_class = OrganizationSearchForm
+    form_class = OrganizationSearchForm
 
-#     def get_queryset(self):
-#         try:
-#             name = self.kwargs['name']
-#         except:
-#             name = ''
-#         if name != '':
-#             object_list = self.model.objects.filter(name__icontains = name)
-#         else:
-#             object_list = self.model.objects.all()
-#         return object_list
+    def get_queryset(self):
+        form = self.form_class(self.request.GET)
+        name = ''
+        if form.is_valid():
+            try:
+                name = form.cleaned_data['search_name']
+            except:
+                name = ''
+        organization_list = None
+        if name != '':
+            organization_list = self.model.objects.filter(name__icontains = name)
+        else:
+            organization_list = self.model.objects.all()
+        return organization_list
 
 
 class OrganizationCreateSuccess(TemplateView):
