@@ -26,6 +26,8 @@ class Organization(models.Model):
     
     website = models.URLField(max_length=64, blank=True)
     
+    ava_image = models.ImageField(upload_to='uploads/', null=True)
+
     longitude = models.CharField(max_length=32, default='-1')
     latitude = models.CharField(max_length=32, default='-1')
     srid = models.IntegerField(default=0)

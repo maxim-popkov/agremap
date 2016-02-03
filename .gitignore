@@ -4,6 +4,7 @@
 session.txt.py
 secret.py
 /verstka
+**/media/*
 **/.sass-cache/*
 **/bower_components/*
 **/migrations/*
