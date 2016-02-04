@@ -4,6 +4,7 @@ from agreapp.models import OrganizationRequest, Organization, Metropoliten
 
 class OrganizationSearchForm(forms.Form):
     search_name = forms.CharField(max_length=128)
+    search_city = forms.CharField(max_length=64)
 
 
 class OrganizationRequestForm(forms.ModelForm):
