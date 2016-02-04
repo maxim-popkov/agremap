@@ -56,7 +56,7 @@ class IndexView():
 
 
 class OrganizationSearchView(ListView):
-    model = Organization
+    model = Organization.objects.filter(is_approved = True, is_deleted = False)
     template_name = 'agreapp/search_results.html'
     context_object_name="organization_list"
     form_class = OrganizationSearchForm
@@ -64,23 +64,41 @@ class OrganizationSearchView(ListView):
     def get_queryset(self):
         form = self.form_class(self.request.GET)
         name = ''
+        city = ''
+        print("in the begining")
+        print(form.is_valid())
         if form.is_valid():
+            print("form is valid")
             try:
                 name = form.cleaned_data['search_name']
                 city = form.cleaned_data['search_city']
+                print("i'm in try blok")
             except:
                 name = ''
+                city = ''
                 
         organization_list = None
-        if city != '' and name != '':
-            organization_list = self.model.objects.filter(city = city)
-            organization_list = organization_list.flter(name__icontains = name)
-        elif city == '' and name != '':
-            organization_list = self.model.objects.filter(name__icontains = name)
-        elif city !='' and name == '':
-            organization_list = self.model.objects.filter(city = city)
-        else:
-            organization_list = []
+        print("city =", city, "; name =", name, ";")
+        if not city:
+            if not name:
+                organization_list = []
+            if name:
+                organization_list = self.model.filter(name__icontains = name)
+        if city:
+            if not name:
+                organization_list = self.model.filter(city = city)
+            if name:
+                organization_list = self.model.filter(city = city)
+                organization_list = organization_list.filter(name__icontains = name)
+        # if city != '' and name != '':
+        #     organization_list = self.model.objects.filter(city__icontains = city)
+        #     organization_list = organization_list.filter(name__icontains = name)
+        # elif city == '' and name != '':
+        #     organization_list = self.model.objects.filter(name__icontains = name)
+        # elif city !='' and name == '':
+        #     organization_list = self.model.objects.filter(city__icontains = city)
+        # else:
+        #     organization_list = []
         return organization_list
 
 
