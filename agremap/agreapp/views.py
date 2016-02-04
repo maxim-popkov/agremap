@@ -75,9 +75,9 @@ class OrganizationSearchView(ListView):
         if city != '' and name != '':
             organization_list = self.model.objects.filter(city = city)
             organization_list = organization_list.flter(name__icontains = name)
-        elif city = '' and name != '':
+        elif city == '' and name != '':
             organization_list = self.model.objects.filter(name__icontains = name)
-        elif city !='' and name='':
+        elif city !='' and name == '':
             organization_list = self.model.objects.filter(city = city)
         else:
             organization_list = []
