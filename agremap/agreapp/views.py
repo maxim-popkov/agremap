@@ -65,6 +65,7 @@ class OrganizationSearchView(ListView):
         form = self.form_class(self.request.GET)
         name = ''
         city = ''
+
         if form.is_valid():
             try:
                 name = form.cleaned_data['search_name']

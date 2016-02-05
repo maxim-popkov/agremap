@@ -54,6 +54,7 @@ PREREQ_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'autofixture',
+    'debug_toolbar',
 ]
 
 INSTALLED_APPS = PREREQ_APPS + PROJECT_APPS
