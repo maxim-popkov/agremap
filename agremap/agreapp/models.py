@@ -19,14 +19,14 @@ class Organization(models.Model):
     
     city = models.CharField(max_length=64)
     address = models.CharField(max_length=256)
-    metropolitens = models.ManyToManyField(Metropoliten)
+    metropolitens = models.ManyToManyField(Metropoliten, blank = True)
     
     phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")
     phone_number = models.CharField(max_length=64, validators=[phone_regex], blank=True) # validators should be a list
     
     website = models.URLField(max_length=64, blank=True)
     
-    ava_image = models.ImageField(upload_to='uploads/', null=True)
+    ava_image = models.ImageField(upload_to='uploads/', null=True, blank = True)
 
     longitude = models.CharField(max_length=32, default='-1')
     latitude = models.CharField(max_length=32, default='-1')
@@ -43,6 +43,15 @@ class Organization(models.Model):
 
     def __str__(self):
         return self.name
+
+    @property
+    def get_ava_url(self):
+        ava_url = None
+        try:
+            ava_url = self.ava_image.url
+        except ValueError as e:
+            ava_url = '/assets/images/thumb.jpg'
+        return ava_url
 
 
 class OrganizationRequest(models.Model):

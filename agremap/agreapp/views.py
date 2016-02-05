@@ -65,20 +65,15 @@ class OrganizationSearchView(ListView):
         form = self.form_class(self.request.GET)
         name = ''
         city = ''
-        print("in the begining")
-        print(form.is_valid())
         if form.is_valid():
-            print("form is valid")
             try:
                 name = form.cleaned_data['search_name']
                 city = form.cleaned_data['search_city']
-                print("i'm in try blok")
             except:
                 name = ''
                 city = ''
                 
         organization_list = None
-        print("city =", city, "; name =", name, ";")
         if not city:
             if not name:
                 organization_list = []
@@ -90,15 +85,6 @@ class OrganizationSearchView(ListView):
             if name:
                 organization_list = self.model.filter(city = city)
                 organization_list = organization_list.filter(name__icontains = name)
-        # if city != '' and name != '':
-        #     organization_list = self.model.objects.filter(city__icontains = city)
-        #     organization_list = organization_list.filter(name__icontains = name)
-        # elif city == '' and name != '':
-        #     organization_list = self.model.objects.filter(name__icontains = name)
-        # elif city !='' and name == '':
-        #     organization_list = self.model.objects.filter(city__icontains = city)
-        # else:
-        #     organization_list = []
         return organization_list
 
 

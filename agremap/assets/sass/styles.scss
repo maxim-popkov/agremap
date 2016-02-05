@@ -1,3 +1,4 @@
+@charset "UTF-8";
 // Import Bootstrap Compass integration
 @import "bootstrap-compass";
 
@@ -181,7 +182,8 @@ body {
     }
 
     &__img-block {
-        position: relative
+        position: relative;
+        height: 250px;
     }
 
     &__img {
