@@ -9031,7 +9031,12 @@ body {
   text-decoration: none;
 }
 
-/* line 250, ../sass/styles.scss */
+/* line 249, ../sass/styles.scss */
+.search-block__wrapper {
+  width: 100%;
+}
+
+/* line 252, ../sass/styles.scss */
 .search-block__search_btn {
   background-color: #3b9487;
   color: white;
@@ -9039,27 +9044,27 @@ body {
   /*height: 45px;*/
 }
 
-/* line 257, ../sass/styles.scss */
+/* line 259, ../sass/styles.scss */
 .search-block__city {
   color: white;
   text-decoration: none;
   border-bottom: 1px dotted white;
 }
 
-/* line 263, ../sass/styles.scss */
+/* line 265, ../sass/styles.scss */
 .search-block__city:hover, .search-block__city:visited, .search-block__city:active, .search-block__city:focus {
   color: white;
   text-decoration: none;
   border-bottom: 1px dotted white;
 }
 
-/* line 270, ../sass/styles.scss */
+/* line 272, ../sass/styles.scss */
 .search-block__search_btn:hover, .search-block__search_btn:focus, .search-block__search_btn:active, .search-block__search_btn.active, .open > .dropdown-toggle.search-block__search_btn {
   background-color: #3b9487;
   color: white;
 }
 
-/* line 275, ../sass/styles.scss */
+/* line 277, ../sass/styles.scss */
 .footer {
   padding-top: 20px;
   margin-top: 100px;

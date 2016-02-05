@@ -246,7 +246,9 @@ body {
     }
 }
 
-
+.search-block__wrapper {
+    width: 100%;
+}
 .search-block__search_btn {
     background-color:  $theme-main-color;
     color: $font-header-color;

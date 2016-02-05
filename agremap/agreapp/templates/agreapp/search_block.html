@@ -1,5 +1,5 @@
 <div class="container-fluid search-block vertical-center">
-    <div class="vcenter">
+    <div class="search-block__wrapper">
         <div class="row">
             <h1 class="search-block__header-one">Поиск лучших стоматологий в Москве <!-- <a class="search-block__city" href="#">Москве</a> --></h1>
         </div>
@@ -13,23 +13,44 @@
         </div>
         <!-- search inputs -->
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <form role="form" method="GET" action="{% url 'agreapp:clinics_search' %}">
-                    <div class="form-group">
-                        <div class="input-group">
+            <div class="col-md-8 col-md-offset-2">
+                <form class="" 
+                      role="form" 
+                      method="GET" 
+                      action="{% url 'agreapp:clinics_search' %}">
+                        <div class="form-group">
+                        
+                            <div class="row">
+                                <div class="col-md-4">
                             <input type="text" 
-                                    class="search-block__search_input input-lg form-control" 
-                                    placeholder="Название организации"
-                                    name="search_name">
-                            <input type="text" 
-                                    class="search-block__search_input input-lg form-control" 
+                                    class="input-lg form-control" 
                                     placeholder="Город"
                                     name="search_city">
-                        </div>
-                            <span class="input-group-btn">
-                                <button class="search-block__search_btn btn btn-lg" type="submit">Найти</button>
-                            </span>
-                    </div>
+                                    
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="input-group">
+                                        <input type="text" 
+                                                class="input-lg form-control" 
+                                                placeholder="Название организации"
+                                                name="search_name">
+                                <span class="input-group-btn">
+                                    <button class="search-block__search_btn btn btn-lg" type="submit">
+                                        Найти
+                                    </button>
+                                </span>
+                                            
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    
+                                </div>
+                            </div>
+
+                            </div>
+                        
+    
                 </form>
             </div>
         </div>
