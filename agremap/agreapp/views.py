@@ -1,5 +1,5 @@
 # Utils
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render, get_object_or_404
 from django.core.urlresolvers import reverse, reverse_lazy
 # Views
@@ -56,37 +56,40 @@ class IndexView():
 
 
 class OrganizationSearchView(ListView):
-    model = Organization.objects.filter(is_approved = True, is_deleted = False)
-    template_name = 'agreapp/search_results.html'
-    context_object_name="organization_list"
-    form_class = OrganizationSearchForm
+    try:
+        model = Organization.objects.filter(is_approved = True, is_deleted = False)
+        template_name = 'agreapp/search_results.html'
+        context_object_name="organization_list"
+        form_class = OrganizationSearchForm
 
-    def get_queryset(self):
-        form = self.form_class(self.request.GET)
-        name = ''
-        city = ''
+        def get_queryset(self):
+            form = self.form_class(self.request.GET)
+            name = ''
+            city = ''
 
-        if form.is_valid():
-            try:
-                name = form.cleaned_data['search_name']
-                city = form.cleaned_data['search_city']
-            except:
-                name = ''
-                city = ''
-                
-        organization_list = None
-        if not city:
-            if not name:
-                organization_list = []
-            if name:
-                organization_list = self.model.filter(name__icontains = name)
-        if city:
-            if not name:
-                organization_list = self.model.filter(city = city)
-            if name:
-                organization_list = self.model.filter(city = city)
-                organization_list = organization_list.filter(name__icontains = name)
-        return organization_list
+            if form.is_valid():
+                try:
+                    name = form.cleaned_data['search_name']
+                    city = form.cleaned_data['search_city']
+                except:
+                    name = ''
+                    city = ''
+                    
+            organization_list = None
+            if not city:
+                if not name:
+                    organization_list = []
+                if name:
+                    organization_list = self.model.filter(name__icontains = name)
+            if city:
+                if not name:
+                    organization_list = self.model.filter(city = city)
+                if name:
+                    organization_list = self.model.filter(city = city)
+                    organization_list = organization_list.filter(name__icontains = name)
+            return organization_list
+    except Exception as e:
+        raise Http404("Some think wrong happens!")
 
 
 class OrganizationCreateSuccess(TemplateView):

@@ -6,12 +6,32 @@ from .models import (Organization, OrganizationRequest,
 
 from django.apps import apps
 
+#функция, которая отмечает организации как подтвержденные
+def set_true_is_approve(modeladmin, request, queryset):
+    orgs_approved = queryset.update(is_approved = True)
+    if orgs_approved == 1:
+        mess = "1 organization was"
+    else:
+        mess = "%s organizations were" % orgs_approved
+    modeladmin.message_user(request, "%s  approved." % mess)
+set_true_is_approve.short_description = "is_approved field set value 'True'"
+
+#функция которая отмечает организации как НЕ подтвержденные
+def set_false_is_approve(modeladmin, request, queryset):
+    orgs_dis_approved = queryset.update(is_approved = False)
+    if orgs_dis_approved == 1:
+        mess = "1 organization was"
+    else:
+        mess = "%s organizations were" % orgs_dis_approved
+    modeladmin.message_user(request, "%s dis approved." % mess)
+set_false_is_approve.short_description = "is_approved field set value 'False'"
 
 #Organization Admin Settings
 class OrganizationRequestAdmin(admin.ModelAdmin):
     list_display = ('name', 'city', 'address', 'is_deleted', 
                     'is_approved', 'phone_number', 'website', 'metropoliten')
 
+    actions = [set_true_is_approve, set_false_is_approve]
 
 #Organization Admin Settings
 class OrganizationAdmin(admin.ModelAdmin):
@@ -19,6 +39,7 @@ class OrganizationAdmin(admin.ModelAdmin):
                     'is_approved', 'num_views', 'phone_number', 'website')
     filter_horizontal = ('metropolitens',)
 
+    actions = [set_true_is_approve, set_false_is_approve]
 
 
 #Metropoliten Admin Settings
